@@ -23,12 +23,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${spaceGrotesk.className} antialiased`}>
         <ThemeProvider attribute={'class'} defaultTheme="dark">
-          <Container>
-            <div className="w-full py-24">
-              <Header />
-              {children}
-            </div>
-          </Container>
+          {/* <Container> */}
+          <div className="w-full py-24">
+            <Header />
+            {children}
+          </div>
+          {/* </Container> */}
         </ThemeProvider>
       </body>
     </html>
