@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.className} antialiased`}>
         <ThemeProvider attribute={'class'} defaultTheme="dark">
           {/* <Container> */}
-          <div className="w-full py-24">
+          <div className="w-full md:py-24 py-8">
             <Header />
             {children}
           </div>

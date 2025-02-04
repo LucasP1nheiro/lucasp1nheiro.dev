@@ -82,7 +82,7 @@ export default function Home() {
         <h3 className="text-muted-foreground font-bold text-3xl mt-24">
           Let's work together!
         </h3>
-        <div className="flex flex-col md:flex-row items-center my-4 gap-4">
+        <div className="flex flex-col md:flex-row md:items-center my-4 gap-4">
           <p className="text-muted-foreground">
             Interested in working with me? Send me a message at
           </p>

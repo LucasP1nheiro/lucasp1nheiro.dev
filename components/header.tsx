@@ -32,9 +32,9 @@ export const Header = () => {
         {/* <Button size={'icon'} className="p-0"> */}
         <div className="flex items-start gap-4">
           <Link href={'/'}>
-            <Avatar className="size-16">
+            <Avatar className="md:size-16">
               <AvatarImage src={'/me.jpg'} className="object-cover bg-center" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>LP</AvatarFallback>
             </Avatar>
           </Link>
           {/* </Button> */}
