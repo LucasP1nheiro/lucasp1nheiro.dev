@@ -8,16 +8,13 @@ import {
   MorphingDialogContent,
   MorphingDialogTitle,
   MorphingDialogImage,
-  MorphingDialogSubtitle,
   MorphingDialogClose,
   MorphingDialogDescription,
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog';
-import { ArrowRight, PlusIcon } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import ViewMoreButton from './view-more-button';
-import AnimatedArrowButton from './animated-arrow-button';
 import { Button } from './button';
 import Link from 'next/link';
 
@@ -79,7 +76,7 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
     >
       <motion.div
         layout
-        className={`flex ${isHovered ? 'gap-8' : 'gap-0'} relative justify-center overflow-hidden py-2 w-full`}
+        className={`flex ${isHovered ? 'gap-12' : 'gap-0'} relative justify-center overflow-hidden py-2 w-full`}
       >
         {projects.map((project, index) => (
           <MorphingDialog
@@ -134,7 +131,7 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
                   className="rounded-md w-96 object-cover"
                 />
 
-                <div className="space-y-4 my-8 p-4">
+                <div className="space-y-4 mt-8 p-4">
                   <MorphingDialogTitle className="text-2xl font-bold">
                     {project.title}
                   </MorphingDialogTitle>

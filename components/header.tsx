@@ -32,8 +32,8 @@ export const Header = () => {
         {/* <Button size={'icon'} className="p-0"> */}
         <div className="flex items-start gap-4">
           <Link href={'/'}>
-            <Avatar>
-              <AvatarImage src={'/me.jpg'} />
+            <Avatar className="size-16">
+              <AvatarImage src={'/me.jpg'} className="object-cover bg-center" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </Link>
