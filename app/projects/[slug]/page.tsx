@@ -41,7 +41,7 @@ const ProjectPage = async ({
         priority
       />
       <section
-        className={`prose prose-li:text-muted-foreground prose-p:text-muted-foreground prose-h1:text-accent-foreground prose-strong:text-accent-foreground prose-h2:text-accent-foreground prose-h3:text-accent-foreground prose-a:text-accent-foreground`}
+        className={`prose prose-li:text-muted-foreground marker:text-accent-foreground prose-p:text-muted-foreground prose-h1:text-accent-foreground prose-strong:text-accent-foreground prose-h2:text-accent-foreground prose-h3:text-accent-foreground prose-a:text-accent-foreground`}
       >
         {project.markdown}
       </section>
