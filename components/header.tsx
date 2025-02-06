@@ -46,7 +46,7 @@ export const Header = () => {
 
         <ul className="flex gap-2">
           {socialLinks.map((item) => (
-            <Button size={'icon'} variant={'outline'}>
+            <Button size={'icon'} variant={'outline'} key={item.name}>
               <Link href={item.href}>
                 <span className={'sr-only'}>{item.name}</span>
                 {item.icon}

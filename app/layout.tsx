@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk as SpaceGrotesk } from 'next/font/google';
 import './globals.css';
-import Container from '@/components/ui/container';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Header } from '@/components/header';
 
 const spaceGrotesk = SpaceGrotesk({
   subsets: ['latin'],
@@ -24,14 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} antialiased`}>
+      <body
+        className={`${spaceGrotesk.className} antialiased overflow-y-scroll`}
+      >
         <ThemeProvider attribute={'class'} defaultTheme="dark">
-          {/* <Container> */}
-          <div className="w-full md:py-24 py-8">
-            <Header />
-            {children}
-          </div>
-          {/* </Container> */}
+          {children}
         </ThemeProvider>
       </body>
     </html>

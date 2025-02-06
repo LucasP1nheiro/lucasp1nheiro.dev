@@ -58,9 +58,12 @@ export default function Home() {
             <strong className="text-accent-foreground">
               driven by the challenge of solving problems
             </strong>{' '}
-            through software engineering. With expertise spanning both front-end
-            and back-end development, I architect robust solutions that bridge
-            technical innovation with real-world user needs. My passion lies in
+            through software engineering. With{' '}
+            <strong className="text-accent-foreground">
+              expertise spanning both front-end and back-end
+            </strong>{' '}
+            development, I architect robust solutions that bridge technical
+            innovation with real-world user needs. My passion lies in
             transforming abstract concepts into functional applications—whether
             optimizing system performance, enhancing user experiences, or
             automating critical workflows. I thrive in environments where code

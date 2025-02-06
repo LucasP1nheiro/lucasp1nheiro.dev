@@ -84,15 +84,22 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
       >
         {projects.map((project, index) => (
           // ... Your MorphingDialog components with the updated variants
-          <MorphingDialog key={project.title} transition={{ type: 'spring', bounce: 0.05, duration: 0.25 }}>
+          <MorphingDialog
+            key={project.title}
+            transition={{ type: 'spring', bounce: 0.05, duration: 0.25 }}
+          >
             <MorphingDialogTrigger>
-              <motion.div className="text-center" layout whileHover={{ zIndex: 50 }}>
+              <motion.div
+                className="text-center"
+                layout
+                whileHover={{ zIndex: 50 }}
+              >
                 <motion.div
                   custom={index}
                   variants={cardVariants}
                   initial="clustered"
                   animate={isHovered ? 'normal' : 'clustered'}
-                  className="relative w-full max-w-80 aspect-square rounded-2xl overflow-hidden shadow-2xl cursor-pointer bg-background"
+                  className="relative w-full md:max-w-80 aspect-square rounded-2xl overflow-hidden shadow-2xl cursor-pointer bg-background"
                 >
                   <MorphingDialogImage
                     src={project.imageUrl}
@@ -115,9 +122,7 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
             </MorphingDialogTrigger>
 
             <MorphingDialogContainer>
-              <MorphingDialogContent
-                className="pointer-events-auto relative max-w-96 border bg-background rounded-lg"
-              >
+              <MorphingDialogContent className="pointer-events-auto relative max-w-96 border bg-background rounded-lg">
                 <MorphingDialogImage
                   src={project.imageUrl}
                   alt={project.title}
@@ -128,7 +133,9 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
                     {project.title}
                   </MorphingDialogTitle>
                   <MorphingDialogDescription className="space-y-4">
-                    <p className="text-muted-foreground">{project.description}</p>
+                    <p className="text-muted-foreground">
+                      {project.description}
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map((tech) => (
                         <div
@@ -140,7 +147,10 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
                       ))}
                     </div>
                     <Button className="group" variant={'ghost'}>
-                      <Link href={project.href} className="flex items-center gap-2">
+                      <Link
+                        href={project.href}
+                        className="flex items-center gap-2"
+                      >
                         View more{' '}
                         <ArrowRight
                           className="-me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5"
