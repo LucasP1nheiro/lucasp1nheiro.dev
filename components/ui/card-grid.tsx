@@ -126,9 +126,10 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
                     {project.title}
                   </MorphingDialogTitle>
                   <MorphingDialogDescription className="space-y-4">
-                    <p className="text-muted-foreground truncate">
+                    <p className="text-muted-foreground truncate md:whitespace-normal md:overflow-visible md:text-clip">
                       {project.description}
                     </p>
+
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map((tech) => (
                         <div
