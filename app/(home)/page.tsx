@@ -2,9 +2,6 @@ import CardGrid from '@/components/ui/card-grid';
 import Container from '@/components/ui/container';
 import { ResumeButton } from '@/components/ui/resume-button';
 
-import formWizardImage from '@/public/projects/form-wizard-square.png';
-import cosmicusImage from '@/public/projects/cosmicus-square.png';
-import doutoraAndressaImage from '@/public/projects/andressa-square.png';
 import { Certification } from '@/components/certification';
 import { Work } from '@/components/work';
 import { Competition } from '@/components/competition';
@@ -12,34 +9,9 @@ import { Graduation } from '@/components/graduation';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
-export default function Home() {
-  const firstProjects = [
-    {
-      title: 'Cosmicus',
-      imageUrl: cosmicusImage.src,
-      description:
-        'Interactive space education platform with 3D celestial visualizations.',
-      stack: ['Next.js', 'React.js', 'Supabase'],
-      href: '/projects/cosmicus',
-    },
-    {
-      title: 'Form Wizard',
-      imageUrl: formWizardImage.src,
-      description:
-        'A configurable form builder with real-time preview and validation system.',
-      stack: ['Next.js', 'React.js', 'Supabase'],
-      href: '/projects/form-wizard',
-    },
-    {
-      title: 'Doutora Andressa',
-      imageUrl: doutoraAndressaImage.src,
-      description:
-        'Telemedicine solution with appointment scheduling and video consultations.',
-      stack: ['Next.js', 'React.js', 'Tailwind'],
-      href: '/projects/doutora-andressa',
-    },
-  ];
+import { projects } from '@/utils/projects';
 
+export default function Home() {
   return (
     <>
       <Container>
@@ -73,7 +45,7 @@ export default function Home() {
           <ResumeButton />
         </div>
       </Container>
-      <CardGrid projects={firstProjects} />
+      <CardGrid projects={projects} />
       <Container>
         <section className="w-full space-y-4">
           <Graduation />

@@ -17,14 +17,7 @@ import { ArrowRight } from 'lucide-react';
 import { useMediaQuery } from 'react-responsive';
 import { Button } from './button';
 import Link from 'next/link';
-
-interface Project {
-  title: string;
-  imageUrl: string;
-  description: string;
-  stack: string[];
-  href: string;
-}
+import { Project } from '@/utils/projects';
 
 interface CardGridProps {
   projects: Project[];
@@ -102,7 +95,7 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
                   className="relative w-full md:max-w-80 aspect-square rounded-2xl overflow-hidden shadow-2xl cursor-pointer bg-background"
                 >
                   <MorphingDialogImage
-                    src={project.imageUrl}
+                    src={project.cardImage}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
@@ -122,9 +115,9 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
             </MorphingDialogTrigger>
 
             <MorphingDialogContainer>
-              <MorphingDialogContent className="pointer-events-auto relative max-w-96 border bg-background rounded-lg">
+              <MorphingDialogContent className="pointer-events-auto relative max-w-96 border bg-background rounded-lg my-12">
                 <MorphingDialogImage
-                  src={project.imageUrl}
+                  src={project.cardImage}
                   alt={project.title}
                   className="rounded-md w-96 object-cover"
                 />
@@ -133,7 +126,7 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
                     {project.title}
                   </MorphingDialogTitle>
                   <MorphingDialogDescription className="space-y-4">
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground truncate">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -148,7 +141,7 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
                     </div>
                     <Button className="group" variant={'ghost'}>
                       <Link
-                        href={project.href}
+                        href={`/projects/${project.key}`}
                         className="flex items-center gap-2"
                       >
                         View more{' '}
