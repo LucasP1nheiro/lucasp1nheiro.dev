@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk as SpaceGrotesk } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { html } from 'motion/react-client';
+
 
 const spaceGrotesk = SpaceGrotesk({
   subsets: ['latin'],
