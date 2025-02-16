@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Space_Grotesk as SpaceGrotesk } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import { html } from 'motion/react-client';
 
 const spaceGrotesk = SpaceGrotesk({
   subsets: ['latin'],
@@ -25,9 +26,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.className} antialiased overflow-y-scroll`}
       >
-        <ThemeProvider attribute={'class'} defaultTheme="dark">
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
