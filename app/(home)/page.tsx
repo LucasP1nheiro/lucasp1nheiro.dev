@@ -20,10 +20,26 @@ export default function Home() {
             <h1 className="font-bold text-3xl text-muted-foreground">
               Hey, I'm Lucas Pinheiro.
             </h1>
-            <h2 className="font-bold text-2xl">
+            <p className="font-bold text-2xl">
               A Full-Stack Developer from 🇧🇷 based in{' '}
-              <span className="underline">Bragança Paulista</span>.
-            </h2>
+              <Link
+                href={'https://www.google.com/search?q=braganca+paulista"'}
+                className="underline"
+              >
+                Bragança Paulista
+              </Link>
+              .
+            </p>
+            <p className="text-muted-foreground">
+              Building digital solutions at{' '}
+              <Link
+                href={'https://www.intranetmall.com.br/br/'}
+                className="font-bold underline text-accent-foreground"
+              >
+                Intranet Mall
+              </Link>
+              .
+            </p>
           </div>
           <p className="text-muted-foreground">
             I am a full-stack developer{' '}
