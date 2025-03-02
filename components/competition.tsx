@@ -107,8 +107,9 @@ const Competition = () => {
           Huawei ICT Competition – National Stage
         </h3>
         <p className="text-muted-foreground">
-          Successfully qualified for the National Stage of Huawei's ICT
-          Competition, showcasing expertise in cloud technologies.
+          Achieved 3rd place in the National Stage of Huawei's ICT Competition,
+          demonstrating expertise in cloud technologies, and qualified for the
+          LATAM Stage.
         </p>
       </div>
     </div>
