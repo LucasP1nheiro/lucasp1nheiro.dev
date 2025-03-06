@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import {
   MorphingDialog,
@@ -25,6 +25,7 @@ interface CardGridProps {
 
 const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Detect if the viewport is less than or equal to 768px (adjust as needed)
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
@@ -64,6 +65,12 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
       transition: { type: 'spring', stiffness: 120, damping: 20 },
     },
   };
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
 
   return (
     <motion.div
