@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 import { projects } from '@/utils/projects';
+import Geo from '@/components/geo';
 
 export default function Home() {
   return (
@@ -60,6 +61,7 @@ export default function Home() {
           </p>
           <ResumeButton />
         </div>
+       
       </Container>
       <CardGrid projects={projects} />
       <Container>
@@ -68,6 +70,10 @@ export default function Home() {
           <Work />
           <Certification />
           <Competition />
+        </section>
+
+        <section>
+          <Geo />
         </section>
 
         <h3 className="text-muted-foreground font-bold text-3xl mt-24">
