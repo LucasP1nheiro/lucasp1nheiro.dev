@@ -38,7 +38,7 @@ const UTC8Clock = ({ className }: UTC8ClockProps) => {
   return (
     <div className={className}>
       <div className="flex items-center text-xs space-x-2">
-        <p className="font-semibold">UTC+8</p>
+        <p className="font-semibold">UTC-3</p>
         <p>{formattedTime}</p>
       </div>
     </div>
