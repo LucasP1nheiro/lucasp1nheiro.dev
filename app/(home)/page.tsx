@@ -21,7 +21,7 @@ export default function Home() {
             <h1 className="font-bold text-4xl text-muted-foreground">
               Hey, I'm Lucas Pinheiro.
             </h1>
-            <p className="font-bold text-2xl text-primary">
+            <p className="font-bold text-2xl text-foreground">
               A Full-Stack Developer from 🇧🇷 based in{' '}
               <Link
                 href={'https://www.google.com/search?q=braganca+paulista"'}
@@ -44,11 +44,11 @@ export default function Home() {
           </div>
           <p className="text-muted-foreground">
             I am a full-stack developer{' '}
-            <strong className="text-primary">
+            <strong className="text-foreground">
               driven by the challenge of solving problems
             </strong>{' '}
             through software engineering. With{' '}
-            <strong className="text-primary">
+            <strong className="text-foreground">
               expertise spanning both front-end and back-end
             </strong>{' '}
             development, I architect robust solutions that bridge technical

@@ -103,7 +103,7 @@ const Competition = () => {
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold mb-2 text-accent-foreground">
+        <h3 className="text-lg font-semibold mb-2 text-foreground">
           Huawei ICT Competition – National Stage
         </h3>
         <p className="text-muted-foreground">

@@ -7,6 +7,8 @@ import Github from './icons/github';
 import Linkedin from './icons/linkedin';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import Container from './ui/container';
+import { ThemeToggle } from './theme-toggle';
+import { ul } from 'motion/react-client';
 
 export const Header = () => {
   const socialLinks = [
@@ -28,7 +30,7 @@ export const Header = () => {
   ];
   return (
     <Container>
-      <header className="flex mb-12 justify-between">
+      <header className="flex mb-12 justify-between flex-col md:flex-row gap-4">
         {/* <Button size={'icon'} className="p-0"> */}
         <div className="flex items-start gap-4">
           <Link href={'/'}>
@@ -43,17 +45,19 @@ export const Header = () => {
             <p className="text-muted-foreground">Software Engineer</p>
           </div>
         </div>
-
-        <ul className="flex gap-2">
-          {socialLinks.map((item) => (
-            <Button size={'icon'} variant={'outline'} key={item.name}>
-              <Link href={item.href}>
-                <span className={'sr-only'}>{item.name}</span>
-                {item.icon}
-              </Link>
-            </Button>
-          ))}
-        </ul>
+        <div className="flex items-center gap-4">
+          <ul className="flex gap-2">
+            {socialLinks.map((item) => (
+              <Button size={'icon'} variant={'outline'} key={item.name}>
+                <Link href={item.href}>
+                  <span className={'sr-only'}>{item.name}</span>
+                  {item.icon}
+                </Link>
+              </Button>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
       </header>
     </Container>
   );

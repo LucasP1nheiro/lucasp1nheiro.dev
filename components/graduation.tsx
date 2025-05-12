@@ -76,13 +76,13 @@ const Graduation = () => {
         </motion.svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold mb-2 text-primary">Degree</h3>
+        <h3 className="text-lg font-semibold mb-2 text-foreground">Degree</h3>
         <p className="text-muted-foreground">
           I've finished my technologist graduation on System Analysis and
           Development on{' '}
           <a
             href="bra.ifsp.edu.br"
-            className="text-primary underline font-bold"
+            className="text-foreground underline font-bold"
           >
             IFSP
           </a>{' '}
