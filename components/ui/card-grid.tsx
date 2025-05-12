@@ -99,7 +99,7 @@ const CardGrid: React.FC<CardGridProps> = ({ projects }) => {
                   variants={cardVariants}
                   initial="clustered"
                   animate={isHovered ? 'normal' : 'clustered'}
-                  className="relative w-full md:max-w-80 aspect-square rounded-2xl overflow-hidden shadow-2xl cursor-pointer bg-background"
+                  className="relative w-full md:max-w-80 aspect-square rounded-2xl overflow-hidden cursor-pointer bg-background"
                 >
                   <MorphingDialogImage
                     src={project.cardImage}
