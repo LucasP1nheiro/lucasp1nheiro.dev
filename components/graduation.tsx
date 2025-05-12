@@ -49,7 +49,7 @@ const Graduation = () => {
     <div
       onMouseEnter={() => controls.start('animate')}
       onMouseLeave={() => controls.start('normal')}
-      className="flex gap-4 hover:bg-white/10 transition-all duration-300 rounded-md py-4 px-2"
+      className="flex gap-4 rounded-md py-4 px-2"
     >
       <div className="cursor-pointer select-none w-fit h-fit rounded-md transition-colors duration-200 flex items-center justify-center">
         <motion.svg
@@ -76,15 +76,13 @@ const Graduation = () => {
         </motion.svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold mb-2 text-accent-foreground">
-          Degree
-        </h3>
+        <h3 className="text-lg font-semibold mb-2 text-primary">Degree</h3>
         <p className="text-muted-foreground">
           I've finished my technologist graduation on System Analysis and
           Development on{' '}
           <a
             href="bra.ifsp.edu.br"
-            className="text-accent-foreground underline font-bold"
+            className="text-primary underline font-bold"
           >
             IFSP
           </a>{' '}

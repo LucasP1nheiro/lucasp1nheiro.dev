@@ -27,7 +27,7 @@ const Work = () => {
     <div
       onMouseEnter={() => controls.start('animate')}
       onMouseLeave={() => controls.start('normal')}
-      className="flex gap-4 hover:bg-white/10 transition-all duration-300 rounded-md group py-4 px-2"
+      className="flex gap-4  rounded-md group py-4 px-2"
     >
       <div className="cursor-pointer select-none rounded-md transition-colors duration-200 flex items-center justify-center w-fit h-fit">
         <svg
@@ -65,11 +65,12 @@ const Work = () => {
       </div>
       <div>
         <h3 className="text-lg font-semibold mb-2 text-accent-foreground">
-          Freelancing
+          Product Building
         </h3>
         <p className="text-muted-foreground">
-          I'm currently offering freelance services in full-stack development,
-          delivering tailored digital solutions for diverse client needs.
+          I'm currently dedicating my time to building a SaaS product, applying
+          my full-stack skills to solve real-world problems through scalable
+          technology.
         </p>
       </div>
     </div>

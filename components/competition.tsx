@@ -27,7 +27,7 @@ const Competition = () => {
     <div
       onMouseEnter={() => controls.start('animate')}
       onMouseLeave={() => controls.start('normal')}
-      className="flex gap-4 hover:bg-white/10 transition-all duration-300 rounded-md py-4 px-2"
+      className="flex gap-4 rounded-md py-4 px-2"
     >
       <div className="cursor-pointer select-none w-fit h-fit rounded-md transition-colors duration-200 flex items-center justify-center">
         <svg

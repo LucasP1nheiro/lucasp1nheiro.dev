@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
-import { Space_Grotesk as SpaceGrotesk } from 'next/font/google';
+import { Space_Grotesk as SpaceGrotesk, Architects_Daughter as ArchitectsDaughter } from 'next/font/google';
 import './globals.css';
 
 
 const spaceGrotesk = SpaceGrotesk({
   subsets: ['latin'],
+});
+
+const architectsDaughter = ArchitectsDaughter({
+  subsets: ['latin'],
+  weight: '400',
 });
 
 export const metadata: Metadata = {
@@ -23,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.className} antialiased overflow-y-scroll`}
+        className={`${architectsDaughter.className} antialiased overflow-y-scroll`}
       >
         {children}
       </body>
