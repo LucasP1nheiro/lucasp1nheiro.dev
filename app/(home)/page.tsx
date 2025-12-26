@@ -18,10 +18,10 @@ export default function Home() {
       <Container>
         <div className="space-y-8">
           <div className="space-y-2">
-            <h1 className="font-bold text-4xl text-muted-foreground">
-              Hey, I'm Lucas Pinheiro.
+            <h1 className="text-4xl text-muted-foreground font-serif">
+             Hey, I'm Lucas Pinheiro.
             </h1>
-            <p className="font-bold text-2xl text-foreground">
+            <p className="text-2xl text-foreground font-serif">
               A Full-Stack Developer from 🇧🇷 based in{' '}
               <Link
                 href={'https://www.google.com/search?q=braganca+paulista"'}

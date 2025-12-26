@@ -36,8 +36,8 @@
     --sidebar-accent-foreground: 14.21 25.68% 29.02%;
     --sidebar-border: 0 0% 75.29%;
     --sidebar-ring: 0 0% 62.75%;
-    --font-sans: Architects Daughter, sans-serif;
-    --font-serif: 'Times New Roman', Times, serif;
+    --font-sans: Inter, sans-serif;
+    --font-serif: 'Instrument Serif', serif;
     --font-mono: 'Courier New', Courier, monospace;
     --radius: 0.625rem;
     --shadow-2xs: 1px 4px 5px 0px hsl(0 0% 0% / 0.01);
@@ -89,8 +89,8 @@
     --sidebar-accent-foreground: 0 0% 20%;
     --sidebar-border: 0 0% 30.98%;
     --sidebar-ring: 0 0% 75.29%;
-    --font-sans: Architects Daughter, sans-serif;
-    --font-serif: Georgia, serif;
+    --font-sans: Inter, sans-serif;
+    --font-serif: 'Instrument Serif', serif;
     --font-mono: 'Fira Code', 'Courier New', monospace;
     --radius: 0.625rem;
     --shadow-2xs: 1px 4px 5px 0px hsl(0 0% 0% / 0.01);
