@@ -1,8 +1,5 @@
 import type { Metadata } from 'next';
-import {
-  Inter,
-  Instrument_Serif as InstrumentSerif,
-} from 'next/font/google';
+import { Inter, Instrument_Serif as InstrumentSerif } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 
@@ -19,9 +16,6 @@ const instrumentSerif = InstrumentSerif({
 export const metadata: Metadata = {
   title: 'Lucas Pinheiro | Portfolio',
   description: "Lucas Pinheiro's portfolio",
-  icons: {
-    icon: '/me.jpg',
-  },
 };
 
 export default function RootLayout({
