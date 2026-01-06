@@ -1,15 +1,15 @@
-import CardGrid from '@/components/ui/card-grid';
 import Container from '@/components/ui/container';
 import { Certification } from '@/components/certification';
 import { Competition } from '@/components/competition';
 import { Graduation } from '@/components/graduation';
 import Link from 'next/link';
-import { projects } from '@/utils/projects';
 import Geo from '@/components/geo';
 import { Button } from '@/components/ui/button';
 import { Mail, BookCheck, Send } from 'lucide-react';
 import Github from '@/components/icons/github';
 import Linkedin from '@/components/icons/linkedin';
+import ProjectCard from '@/components/project-card';
+import { projects } from '@/utils/projects';
 
 export default function Home() {
   const socialLinks = [
@@ -59,23 +59,7 @@ export default function Home() {
               .
             </p>
           </div>
-          <p className="text-muted-foreground">
-            I am a full-stack developer{' '}
-            <strong className="text-foreground">
-              driven by the challenge of solving problems
-            </strong>{' '}
-            through software engineering. With{' '}
-            <strong className="text-foreground">
-              expertise spanning both front-end and back-end
-            </strong>{' '}
-            development, I architect robust solutions that bridge technical
-            innovation with real-world user needs. My passion lies in
-            transforming abstract concepts into functional applications—whether
-            optimizing system performance, enhancing user experiences, or
-            automating critical workflows. I thrive in environments where code
-            meets creative problem-solving, leveraging modern technologies to
-            deliver end-to-end solutions that make a measurable impact.
-          </p>
+
           <div className="flex sm:items-center gap-4 flex-col sm:flex-row">
             <Button asChild>
               <Link href={'/resume.pdf'}>
@@ -96,9 +80,22 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <CardGrid projects={projects} />
+
       <Container>
-        <section className="w-full space-y-4">
+        <section className="w-full space-y-4 mt-24">
+          <h2 className="text-4xl font-serif text-secondary-foreground dark:text-secondary">
+            My Work.
+          </h2>
+          <div className="flex flex-col gap-4">
+            {projects.map((project) => (
+              <ProjectCard key={project.key} project={project} />
+            ))}
+          </div>
+        </section>
+      </Container>
+      {/* <CardGrid projects={projects} /> */}
+      <Container>
+        <section className="w-full space-y-4 mt-24">
           <h2 className="text-4xl font-serif text-secondary-foreground dark:text-secondary">
             Education and Achievements.
           </h2>
