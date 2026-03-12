@@ -9,7 +9,7 @@ const Geo = () => {
       <UTCMinus3Clock />
       <Globe />
       <div className="text-center">
-        <p className="max-w-[500px] text-muted-foreground">
+        <p className="max-w-[500px] text-muted-foreground text-sm">
           I operate in the <strong>UTC-3 timezone</strong> (Brasília Time),
           located in Bragança Paulista, São Paulo, Brazil.
         </p>

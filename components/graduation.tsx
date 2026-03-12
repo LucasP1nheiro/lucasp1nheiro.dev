@@ -77,12 +77,13 @@ const Graduation = () => {
       </div>
       <div>
         <h3 className="text-lg font-semibold mb-2 text-foreground">Degree</h3>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           I've finished my technologist graduation on System Analysis and
           Development on{' '}
           <a
-            href="bra.ifsp.edu.br"
+            href="https://bra.ifsp.edu.br/"
             className="text-foreground underline font-bold"
+            target='_blank'
           >
             IFSP
           </a>{' '}
