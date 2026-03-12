@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 
 interface UTCMinus3ClockProps {
   className?: string;
@@ -8,6 +9,8 @@ interface UTCMinus3ClockProps {
 
 const UTCMinus3Clock = ({ className }: UTCMinus3ClockProps) => {
   const [time, setTime] = useState<Date | null>(null);
+  const t = useTranslations('UTCMinus3Clock');
+  const locale = useLocale();
 
   useEffect(() => {
     setTime(new Date());
@@ -22,12 +25,12 @@ const UTCMinus3Clock = ({ className }: UTCMinus3ClockProps) => {
   if (time === null) {
     return (
       <div className={className}>
-        <p className="text-xs">Loading...</p>
+        <p className="text-xs">{t('loading')}</p>
       </div>
     );
   }
 
-  const formattedTime = new Intl.DateTimeFormat('en-US', {
+  const formattedTime = new Intl.DateTimeFormat(locale, {
     timeZone: 'America/Sao_Paulo',
     hour: '2-digit',
     minute: '2-digit',

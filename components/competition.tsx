@@ -2,6 +2,7 @@
 
 import type { Transition, Variants } from 'motion/react';
 import { motion, useAnimation } from 'motion/react';
+import { useTranslations } from 'next-intl';
 
 const circleTransition: Transition = {
   duration: 0.3,
@@ -22,6 +23,7 @@ const circleVariants: Variants = {
 
 const Competition = () => {
   const controls = useAnimation();
+  const t = useTranslations('Competition');
 
   return (
     <div
@@ -103,14 +105,8 @@ const Competition = () => {
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold mb-2 text-foreground">
-          Huawei ICT Competition – National Stage
-        </h3>
-        <p className="text-muted-foreground text-sm">
-          Achieved 3rd place in the National Stage of Huawei's ICT Competition,
-          demonstrating expertise in cloud technologies, and qualified for the
-          LATAM Stage.
-        </p>
+        <h3 className="text-lg font-semibold mb-2 text-foreground">{t('title')}</h3>
+        <p className="text-muted-foreground text-sm">{t('description')}</p>
       </div>
     </div>
   );
