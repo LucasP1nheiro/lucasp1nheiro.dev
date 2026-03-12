@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     title: 'Doutora Andressa',
     description:
-      'This is a freelance project for Doutora Andressa, dermatologist, designed to showcase her expertise, treatments, and patient testimonials in a visually appealing and user-friendly landing page.',
+      'Freelance project for Doutora Andressa, a dermatologist. A landing page built to showcase her expertise, treatments, and patient testimonials.',
     stack: ['Next.js', 'React.js', 'Tailwind'],
     key: 'doutora-andressa',
     markdown: <DoutoraAndressaMarkdown />,
