@@ -1,28 +1,28 @@
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/ui/container';
-import { Home, ArrowLeft } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Link } from '@/i18n/routing';
+import { getTranslations } from 'next-intl/server';
 
-export default function NotFound() {
+export default async function NotFound() {
+  const t = await getTranslations('NotFound');
+
   return (
     <Container>
       <div className="min-h-screen flex flex-col items-center justify-center text-center space-y-6">
         <div className="space-y-4">
           <h1 className="text-8xl font-serif text-primary">404</h1>
           <h2 className="text-4xl font-serif text-secondary-foreground dark:text-secondary">
-            Page Not Found
+            {t('title')}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-md">
-            Oops! The page you're looking for doesn't exist. It might have been
-            moved, deleted, or you entered the wrong URL.
-          </p>
+          <p className="text-lg text-muted-foreground max-w-md">{t('description')}</p>
         </div>
 
         <div className="flex gap-4 flex-col sm:flex-row">
           <Button asChild>
             <Link href="/">
               <Home />
-              Go Home
+              {t('go_home')}
             </Link>
           </Button>
         </div>

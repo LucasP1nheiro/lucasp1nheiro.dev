@@ -3,8 +3,9 @@ import { projects } from '@/utils/projects';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { LucideArrowUpRight } from 'lucide-react';
+import { Link } from '@/i18n/routing';
+import { getTranslations } from 'next-intl/server';
 
 const ProjectPage = async ({
   params,
@@ -12,6 +13,7 @@ const ProjectPage = async ({
   params: Promise<{ slug: string }>;
 }) => {
   const slug = (await params).slug;
+  const t = await getTranslations('ProjectPage');
 
   const project = projects.find((item) => item.key === slug);
 
@@ -22,21 +24,19 @@ const ProjectPage = async ({
   return (
     <main className="w-full space-y-8">
       <div className="w-full flex items-center justify-between">
-        <h1 className="text-muted-foreground font-bold text-3xl">
-          {project.title}
-        </h1>
+        <h1 className="text-muted-foreground font-bold text-3xl">{project.title}</h1>
         <Button asChild variant={'ghost'}>
           <Link href={project.projectUrl}>
-            <p>View project</p>
+            <p>{t('view_project')}</p>
             <LucideArrowUpRight />
           </Link>
         </Button>
       </div>
       <Image
         src={project.banner}
-        alt={`Project ${project.title} image`}
-        width={384} // Match the intended display width
-        height={384} // Match the intended display height
+        alt={t('image_alt', { title: project.title })}
+        width={384}
+        height={384}
         className="w-full h-auto rounded-md object-cover bg-center"
         priority
       />
