@@ -10,6 +10,7 @@ import Github from '@/components/icons/github';
 import Linkedin from '@/components/icons/linkedin';
 import ProjectCard from '@/components/project-card';
 import { projects } from '@/utils/projects';
+import { WorkExperience } from '@/components/work-experience';
 
 export default function Home() {
   const socialLinks = [
@@ -84,6 +85,15 @@ export default function Home() {
       <Container>
         <section className="w-full space-y-4 mt-24">
           <h2 className="text-4xl font-serif text-secondary-foreground dark:text-secondary">
+            Experience.
+          </h2>
+          <WorkExperience />
+        </section>
+      </Container>
+
+      {/* <Container>
+        <section className="w-full space-y-4 mt-24">
+          <h2 className="text-4xl font-serif text-secondary-foreground dark:text-secondary">
             My Work.
           </h2>
           <div className="flex flex-col gap-4">
@@ -92,8 +102,8 @@ export default function Home() {
             ))}
           </div>
         </section>
-      </Container>
-      {/* <CardGrid projects={projects} /> */}
+      </Container> */}
+      
       <Container>
         <section className="w-full space-y-4 mt-24">
           <h2 className="text-4xl font-serif text-secondary-foreground dark:text-secondary">
@@ -116,7 +126,7 @@ export default function Home() {
             Let's work together!
           </h3>
           <div className="flex flex-col md:items-center my-4 gap-4">
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Interested in working with me? Send me a message at
             </p>
 
