@@ -1,26 +1,21 @@
 import type { Metadata } from 'next';
-import {
-  Space_Grotesk as SpaceGrotesk,
-  Architects_Daughter as ArchitectsDaughter,
-} from 'next/font/google';
+import { Inter, Instrument_Serif as InstrumentSerif } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 
-const spaceGrotesk = SpaceGrotesk({
+const inter = Inter({
   subsets: ['latin'],
 });
 
-const architectsDaughter = ArchitectsDaughter({
+const instrumentSerif = InstrumentSerif({
   subsets: ['latin'],
   weight: '400',
+  variable: '--font-serif',
 });
 
 export const metadata: Metadata = {
   title: 'Lucas Pinheiro | Portfolio',
   description: "Lucas Pinheiro's portfolio",
-  icons: {
-    icon: '/me.jpg',
-  },
 };
 
 export default function RootLayout({
@@ -31,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${architectsDaughter.className} antialiased overflow-y-scroll`}
+        className={`${inter.className} ${instrumentSerif.variable} antialiased overflow-y-scroll`}
       >
         <ThemeProvider
           attribute="class"

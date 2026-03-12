@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from 'react';
 
-interface UTC8ClockProps {
+interface UTCMinus3ClockProps {
   className?: string;
 }
 
-const UTC8Clock = ({ className }: UTC8ClockProps) => {
+const UTCMinus3Clock = ({ className }: UTCMinus3ClockProps) => {
   const [time, setTime] = useState<Date | null>(null);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const UTC8Clock = ({ className }: UTC8ClockProps) => {
   }
 
   const formattedTime = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Sao_Paulo', 
+    timeZone: 'America/Sao_Paulo',
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
@@ -45,4 +45,4 @@ const UTC8Clock = ({ className }: UTC8ClockProps) => {
   );
 };
 
-export default UTC8Clock;
+export default UTCMinus3Clock;

@@ -57,7 +57,7 @@ const Certification = () => {
         <h3 className="text-lg font-semibold mb-2 text-foreground">
           AWS Academy Graduate - Cloud Architecting
         </h3>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           Certified in{' '}
           <a
             href="https://www.credly.com/badges/8c81c14d-32dd-4d69-9161-b2b23a8d9675/linked_in?t=som1sv"

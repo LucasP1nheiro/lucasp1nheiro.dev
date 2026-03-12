@@ -106,7 +106,7 @@ const Competition = () => {
         <h3 className="text-lg font-semibold mb-2 text-foreground">
           Huawei ICT Competition – National Stage
         </h3>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           Achieved 3rd place in the National Stage of Huawei's ICT Competition,
           demonstrating expertise in cloud technologies, and qualified for the
           LATAM Stage.
