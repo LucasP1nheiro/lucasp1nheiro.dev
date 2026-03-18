@@ -2,6 +2,7 @@
 
 import type { Variants } from 'motion/react';
 import { motion, useAnimation } from 'motion/react';
+import { useTranslations } from 'next-intl';
 
 const pathVariants: Variants = {
   normal: {
@@ -26,6 +27,7 @@ const pathVariants: Variants = {
 
 const Certification = () => {
   const controls = useAnimation();
+  const t = useTranslations('Certification');
 
   return (
     <div
@@ -54,19 +56,16 @@ const Certification = () => {
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold mb-2 text-foreground">
-          AWS Academy Graduate - Cloud Architecting
-        </h3>
+        <h3 className="text-lg font-semibold mb-2 text-foreground">{t('title')}</h3>
         <p className="text-muted-foreground text-sm">
-          Certified in{' '}
+          {t('description_prefix')}{' '}
           <a
             href="https://www.credly.com/badges/8c81c14d-32dd-4d69-9161-b2b23a8d9675/linked_in?t=som1sv"
             className="text-foreground font-semibold underline"
           >
-            AWS Cloud Architecting
+            {t('link_text')}
           </a>
-          , with in-depth knowledge of key cloud services and their
-          applications.
+          {t('description_suffix')}
         </p>
       </div>
     </div>

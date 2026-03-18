@@ -2,13 +2,16 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { getTranslations } from 'next-intl/server';
 
-export default function ProjectLayout({
+export default async function ProjectLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const t = await getTranslations('ProjectLayout');
+
   return (
     <Container>
       <div className="w-full md:py-24 py-8">
@@ -16,7 +19,7 @@ export default function ProjectLayout({
           <Button asChild variant={'ghost'}>
             <Link href={'/'}>
               <ArrowLeft />
-              <p>Back to home</p>
+              <p>{t('back_home')}</p>
             </Link>
           </Button>
           <ThemeToggle />

@@ -2,6 +2,7 @@
 
 import type { Variants } from 'motion/react';
 import { motion, useAnimation } from 'motion/react';
+import { useTranslations } from 'next-intl';
 
 const fireVariants: Variants = {
   normal: {
@@ -44,6 +45,7 @@ const variants: Variants = {
 
 const Graduation = () => {
   const controls = useAnimation();
+  const t = useTranslations('Graduation');
 
   return (
     <div
@@ -76,18 +78,17 @@ const Graduation = () => {
         </motion.svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold mb-2 text-foreground">Degree</h3>
+        <h3 className="text-lg font-semibold mb-2 text-foreground">{t('title')}</h3>
         <p className="text-muted-foreground text-sm">
-          I've finished my technologist graduation on System Analysis and
-          Development on{' '}
+          {t('description_prefix')}{' '}
           <a
             href="https://bra.ifsp.edu.br/"
             className="text-foreground underline font-bold"
-            target='_blank'
+            target="_blank"
           >
-            IFSP
+            {t('link_text')}
           </a>{' '}
-          in 2024.
+          {t('description_suffix')}
         </p>
       </div>
     </div>

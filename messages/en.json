@@ -1,0 +1,80 @@
+{
+  "Metadata": {
+    "title": "Lucas Pinheiro | Portfolio",
+    "description": "Lucas Pinheiro's portfolio"
+  },
+  "HomePage": {
+    "greeting": "Hey, I'm Lucas Pinheiro.",
+    "tagline": "A Full-Stack Developer from 🇧🇷 based in",
+    "tagline_location": "Bragança Paulista",
+    "working_at": "Working at",
+    "resume_button": "Checkout my resume",
+    "section_experience": "Experience.",
+    "section_work": "My Work.",
+    "section_education": "Education and Achievements.",
+    "section_location": "My Location",
+    "footer_cta": "Let's work together!",
+    "footer_message": "Interested in working with me? Send me a message at"
+  },
+  "ProjectPage": {
+    "view_project": "View project",
+    "image_alt": "Project {title} image"
+  },
+  "ProjectLayout": {
+    "back_home": "Back to home"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.",
+    "go_home": "Go Home"
+  },
+  "Header": {
+    "role": "Software Engineer",
+    "avatar_fallback": "LP"
+  },
+  "Certification": {
+    "title": "AWS Academy Graduate - Cloud Architecting",
+    "description_prefix": "Certified in",
+    "link_text": "AWS Cloud Architecting",
+    "description_suffix": ", with in-depth knowledge of key cloud services and their applications."
+  },
+  "Competition": {
+    "title": "Huawei ICT Competition – National Stage",
+    "description": "Achieved 3rd place in the National Stage of Huawei's ICT Competition, demonstrating expertise in cloud technologies, and qualified for the LATAM Stage."
+  },
+  "Graduation": {
+    "title": "Degree",
+    "description_prefix": "I've finished my technologist graduation on System Analysis and Development on",
+    "link_text": "IFSP",
+    "description_suffix": "in 2024."
+  },
+  "Geo": {
+    "timezone": "UTC-3",
+    "description": "I operate in the <strong>{timezone}</strong> timezone (Brasília Time), located in Bragança Paulista, São Paulo, Brazil."
+  },
+  "UTCMinus3Clock": {
+    "loading": "Loading..."
+  },
+  "ThemeToggle": {
+    "tooltip": "Toggle light/dark mode"
+  },
+  "LocaleSwitcher": {
+    "label": "Switch to {locale}",
+    "en": "EN",
+    "pt-BR": "PT"
+  },
+  "WorkExperience": {
+    "badge_current": "Current",
+    "intranet_role": "Software Developer",
+    "intranet_period": "Feb 2025 — Present",
+    "intranet_desc_0": "Built nine frontend projects from scratch with a strong focus on performance using Next.js, including three multi-tenant applications.",
+    "intranet_desc_1": "Rebuilt legacy sites in Next.js achieving a perfect 100 SEO score on Lighthouse.",
+    "intranet_desc_2": "Integrated third-party APIs for features like parking reservation and event registration.",
+    "intranet_desc_3": "Resolved race conditions in the event registration system using database locks to ensure isolation between concurrent transactions and prevent duplicate records.",
+    "intranet_desc_4": "Maintained and evolved over 20 shopping mall websites in production serving thousands of daily users.",
+    "freelance_role": "Web Developer",
+    "freelance_period": "Oct 2024",
+    "freelance_desc_0": "Developed a dermatologist website using Next.js and React, focused on performance, SEO, and patient conversion.",
+    "freelance_desc_1": "Developed a tattoo artist website with a custom CMS for portfolio and content management, using Next.js, Prisma, and Better Auth for authentication and access control."
+  }
+}

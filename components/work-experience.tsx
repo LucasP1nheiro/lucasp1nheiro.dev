@@ -3,40 +3,29 @@
 import type { Variants } from 'motion/react';
 import { motion, useAnimation } from 'motion/react';
 import { Badge } from './ui/badge';
+import { useTranslations } from 'next-intl';
 
-interface Experience {
+interface ExperienceData {
   company: string;
-  role: string;
-  period: string;
+  key: string;
   current: boolean;
-  description: string[];
+  descCount: number;
   stack: string[];
 }
 
-const experiences: Experience[] = [
+const experiences: ExperienceData[] = [
   {
     company: 'Intranet Mall',
-    role: 'Software Developer',
-    period: 'Feb 2025 — Present',
+    key: 'intranet',
     current: true,
-    description: [
-      'Built nine frontend projects from scratch with a strong focus on performance using Next.js, including three multi-tenant applications.',
-      'Rebuilt legacy sites in Next.js achieving a perfect 100 SEO score on Lighthouse.',
-      'Integrated third-party APIs for features like parking reservation and event registration.',
-      'Resolved race conditions in the event registration system using database locks to ensure isolation between concurrent transactions and prevent duplicate records.',
-      'Maintained and evolved over 20 shopping mall websites in production serving thousands of daily users.',
-    ],
+    descCount: 5,
     stack: ['Next.js', 'React.js', 'TypeScript', 'TailwindCSS', 'Fastify', 'Kysely', 'PayloadCMS', 'Zod', 'Zustand'],
   },
   {
     company: 'Freelance',
-    role: 'Web Developer',
-    period: 'Oct 2024',
+    key: 'freelance',
     current: false,
-    description: [
-      'Developed a dermatologist website using Next.js and React, focused on performance, SEO, and patient conversion.',
-      'Developed a tattoo artist website with a custom CMS for portfolio and content management, using Next.js, Prisma, and Better Auth for authentication and access control.',
-    ],
+    descCount: 2,
     stack: ['Next.js', 'React', 'Prisma', 'Better Auth'],
   },
 ];
@@ -57,12 +46,19 @@ const dotVariants: Variants = {
 };
 
 interface ExperienceItemProps {
-  experience: Experience;
+  experience: ExperienceData;
   isLast: boolean;
 }
 
 const ExperienceItem = ({ experience, isLast }: ExperienceItemProps) => {
   const controls = useAnimation();
+  const t = useTranslations('WorkExperience');
+
+  const role = t(`${experience.key}_role` as Parameters<typeof t>[0]);
+  const period = t(`${experience.key}_period` as Parameters<typeof t>[0]);
+  const descriptions = Array.from({ length: experience.descCount }, (_, i) =>
+    t(`${experience.key}_desc_${i}` as Parameters<typeof t>[0])
+  );
 
   return (
     <div
@@ -84,14 +80,12 @@ const ExperienceItem = ({ experience, isLast }: ExperienceItemProps) => {
       </div>
 
       {/* Content */}
-      <div className={`pb-8 ${isLast ? '' : ''}`}>
+      <div className="pb-8">
         <div className="flex flex-wrap items-center gap-2 mb-1">
-          <h3 className="text-lg font-semibold text-foreground">
-            {experience.role}
-          </h3>
+          <h3 className="text-lg font-semibold text-foreground">{role}</h3>
           {experience.current && (
             <Badge className="text-xs uppercase bg-primary/10 text-primary border-0 hover:bg-primary/20">
-              Current
+              {t('badge_current')}
             </Badge>
           )}
         </div>
@@ -100,12 +94,10 @@ const ExperienceItem = ({ experience, isLast }: ExperienceItemProps) => {
           {experience.company}
         </p>
 
-        <p className="text-xs text-muted-foreground mb-3">
-          {experience.period}
-        </p>
+        <p className="text-xs text-muted-foreground mb-3">{period}</p>
 
         <ul className="text-muted-foreground text-sm leading-relaxed mb-3 list-disc list-inside space-y-1">
-          {experience.description.map((item) => (
+          {descriptions.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>

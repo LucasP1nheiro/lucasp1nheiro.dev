@@ -10,9 +10,11 @@ import {
 } from '@/components/ui/tooltip';
 import { useTheme } from 'next-themes';
 import React, { useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 export function ThemeToggle() {
   const [isMounted, setIsMounted] = React.useState(false);
+  const t = useTranslations('ThemeToggle');
 
   const { setTheme, theme } = useTheme();
 
@@ -49,7 +51,7 @@ export function ThemeToggle() {
               </SwitchPrimitives.Root>
             </span>
           </TooltipTrigger>
-          <TooltipContent>Toggle light/dark mode</TooltipContent>
+          <TooltipContent>{t('tooltip')}</TooltipContent>
         </Tooltip>
       </TooltipProvider>
     </div>

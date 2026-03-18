@@ -2,10 +2,9 @@ import type { Metadata } from 'next';
 import { Inter, Instrument_Serif as InstrumentSerif } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import { getLocale } from 'next-intl/server';
 
-const inter = Inter({
-  subsets: ['latin'],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 const instrumentSerif = InstrumentSerif({
   subsets: ['latin'],
@@ -18,13 +17,15 @@ export const metadata: Metadata = {
   description: "Lucas Pinheiro's portfolio",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const locale = await getLocale();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${inter.className} ${instrumentSerif.variable} antialiased overflow-y-scroll`}
       >
