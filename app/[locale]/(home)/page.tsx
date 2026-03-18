@@ -10,6 +10,7 @@ import Linkedin from '@/components/icons/linkedin';
 import { WorkExperience } from '@/components/work-experience';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
+import NextLink from 'next/link';
 
 export default async function Home() {
   const t = await getTranslations('HomePage');
@@ -62,10 +63,10 @@ export default async function Home() {
 
           <div className="flex sm:items-center gap-4 flex-col sm:flex-row">
             <Button asChild>
-              <Link href={'/resume.pdf'}>
+              <NextLink href={'/resume.pdf'}>
                 <BookCheck />
                 {t('resume_button')}
-              </Link>
+              </NextLink>
             </Button>
             <ul className="flex gap-2 justify-center">
               {socialLinks.map((item) => (

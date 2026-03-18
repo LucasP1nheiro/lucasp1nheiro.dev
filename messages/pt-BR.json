@@ -70,12 +70,11 @@
     "intranet_desc_0": "Construí nove projetos frontend do zero com forte foco em performance usando Next.js, incluindo três aplicações multi-tenant.",
     "intranet_desc_1": "Reconstruí sites legados em Next.js atingindo pontuação 100 em SEO no Lighthouse.",
     "intranet_desc_2": "Integrei APIs de terceiros para funcionalidades como reserva de vagas de estacionamento e inscrição em eventos.",
-    "intranet_desc_3": "Resolvi condições de corrida no sistema de inscrição de eventos usando bloqueios de banco de dados para garantir atomicidade e evitar registros duplicados.",
+    "intranet_desc_3": "Resolvi condições de corrida no sistema de inscrição de eventos usando bloqueios de banco de dados para garantir isolamento entre transações concorrentes e evitar registros duplicados.",
     "intranet_desc_4": "Mantive e evolui mais de 20 sites de shopping centers em produção atendendo milhares de usuários diários.",
     "freelance_role": "Desenvolvedor Web",
     "freelance_period": "Out 2024",
-    "freelance_desc_0": "Desenvolvi uma landing page responsiva com foco em performance, SEO e conversão de pacientes.",
-    "freelance_desc_1": "Construí um site para tatuador com CMS personalizado para portfólio e gerenciamento de conteúdo, incluindo autenticação e controle de acesso.",
-    "freelance_desc_2": "Conduzi o ciclo completo do projeto — do levantamento de requisitos e design até o desenvolvimento e entrega ao cliente."
+    "freelance_desc_0": "Desenvolvi um site para dermatologista usando Next.js e React, com foco em performance, SEO e conversão de pacientes.",
+    "freelance_desc_1": "Desenvolvi um site para tatuador com CMS personalizado para portfólio e gerenciamento de conteúdo, usando Next.js, Prisma e Better Auth para autenticação e controle de acesso."
   }
 }
