@@ -9,19 +9,27 @@ export function LocaleSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const nextLocale = locale === 'en' ? 'pt-BR' : 'en';
-
-  const handleSwitch = () => {
-    router.replace(pathname, { locale: nextLocale });
+  const switchTo = (target: 'en' | 'pt-BR') => {
+    if (target !== locale) router.replace(pathname, { locale: target });
   };
 
   return (
-    <button
-      onClick={handleSwitch}
-      className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-2"
-      aria-label={t('label', { locale: nextLocale })}
-    >
-      {t(nextLocale as 'en' | 'pt-BR')}
-    </button>
+    <div className="flex items-center gap-2 text-2xl leading-none">
+      <button
+        onClick={() => switchTo('en')}
+        aria-label={t('label', { locale: 'en' })}
+        className={`transition-opacity hover:opacity-70 ${locale !== 'en' ? 'opacity-20' : ''}`}
+      >
+        🇺🇸
+      </button>
+      <span className="text-sm text-muted-foreground">|</span>
+      <button
+        onClick={() => switchTo('pt-BR')}
+        aria-label={t('label', { locale: 'pt-BR' })}
+        className={`transition-opacity hover:opacity-70 ${locale !== 'pt-BR' ? 'opacity-20' : ''}`}
+      >
+        🇧🇷
+      </button>
+    </div>
   );
 }
