@@ -25,7 +25,7 @@ const experiences: ExperienceData[] = [
     company: 'Freelance',
     key: 'freelance',
     current: false,
-    descCount: 3,
+    descCount: 2,
     stack: ['Next.js', 'React', 'Prisma', 'Better Auth'],
   },
 ];
