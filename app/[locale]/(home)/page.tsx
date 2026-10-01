@@ -4,13 +4,12 @@ import { Competition } from '@/components/competition';
 import { Graduation } from '@/components/graduation';
 import Geo from '@/components/geo';
 import { Button } from '@/components/ui/button';
-import { Mail, BookCheck, Send } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import Github from '@/components/icons/github';
 import Linkedin from '@/components/icons/linkedin';
 import { WorkExperience } from '@/components/work-experience';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import NextLink from 'next/link';
 
 export default async function Home() {
   const t = await getTranslations('HomePage');
@@ -62,12 +61,6 @@ export default async function Home() {
           </div>
 
           <div className="flex sm:items-center gap-4 flex-col sm:flex-row">
-            <Button asChild>
-              <NextLink href={'/resume.pdf'}>
-                <BookCheck />
-                {t('resume_button')}
-              </NextLink>
-            </Button>
             <ul className="flex gap-2 justify-center">
               {socialLinks.map((item) => (
                 <Button variant={'ghost'} key={item.name} className="group">
