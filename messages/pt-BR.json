@@ -66,14 +66,13 @@
     "badge_current": "Atual",
     "intranet_role": "Desenvolvedor de Software",
     "intranet_period": "Fev 2025 — Presente",
-    "intranet_desc_0": "Construí nove projetos frontend do zero com forte foco em performance usando Next.js, incluindo três aplicações multi-tenant.",
-    "intranet_desc_1": "Liderando a reconstrução em andamento do CMS que alimenta os sites dos clientes de shopping centers, implementando revalidação sob demanda para reduzir custos de ISR e manter o conteúdo sempre atualizado.",
-    "intranet_desc_2": "Projetei e construí um módulo de page builder para o CMS, permitindo que clientes componham landing pages personalizadas através de um schema versionado.",
-    "intranet_desc_3": "Resolvi condições de corrida no sistema de inscrição de eventos usando bloqueios de banco de dados para garantir isolamento entre transações concorrentes e evitar registros duplicados.",
-    "intranet_desc_4": "Mantive e evolui mais de 20 sites de shopping centers em produção atendendo milhares de usuários diários.",
-    "freelance_role": "Desenvolvedor Web",
-    "freelance_period": "Out 2024",
-    "freelance_desc_0": "Desenvolvi um site para dermatologista usando Next.js e React, com foco em performance, SEO e conversão de pacientes.",
-    "freelance_desc_1": "Desenvolvi um site para tatuador com CMS personalizado para portfólio e gerenciamento de conteúdo, usando Next.js, Prisma e Better Auth para autenticação e controle de acesso."
+    "intranet_desc_0": "Contribuí para a definição da arquitetura do backend de uma nova solução e atuo ativamente no seu desenvolvimento com Node.js, TypeScript e Fastify.",
+    "intranet_desc_1": "Resolvi condições de corrida no sistema de inscrição em eventos com transações e bloqueios pessimistas no MySQL, garantindo isolamento entre transações concorrentes e eliminando registros duplicados.",
+    "intranet_desc_2": "Contribuí para a refatoração de um sistema legado, migrando-o para uma stack moderna com API em Fastify e frontend em Next.js, containerizada com Docker e integrada a serviços AWS (Lambda, DynamoDB, Secrets Manager, ECS, CloudWatch, S3, ECR).",
+    "intranet_desc_3": "Reduzi em 60% o tempo de build das imagens Docker da aplicação ao configurar o cache de camadas do Kaniko no Amazon ECR.",
+    "intranet_desc_4": "Liderei a reconstrução do CMS que alimenta os sites dos clientes de shopping centers, definindo uma arquitetura modular em camadas com Next.js, TypeScript e Kysely sobre MySQL, melhorando manutenibilidade e escalabilidade.",
+    "intranet_desc_5": "Implementei revalidação sob demanda no novo CMS, acionada por webhooks na Vercel, reduzindo custos de ISR e mantendo o conteúdo dos sites sempre atualizado.",
+    "intranet_desc_6": "Projetei e construí um módulo de page builder para o CMS, permitindo que clientes componham landing pages personalizadas a partir de um schema versionado e validado com Zod, com server actions tipadas via ZSA e estado do editor gerenciado com Zustand.",
+    "intranet_desc_7": "Construí nove aplicações web do zero com Next.js, React e TypeScript, incluindo três multi-tenant, com foco em performance (SSR/ISR, SEO), e mantive mais de 20 sites de shopping centers em produção na Vercel, atendendo milhares de usuários diários."
   }
 }
